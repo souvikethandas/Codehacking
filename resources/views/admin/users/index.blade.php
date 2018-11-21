@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th scope="col">Id</th>
+        <th scope="col">Photo</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Role</th>
@@ -26,7 +27,8 @@
 
       <tr>
         <td> {{$user->id}} </td>
-        <td> {{$user->name}} </td>
+        <td><img height="50" src="{{$user->photo ? $user->photo->file : '/images/Image-not-available_1.jpg'}}" alt="">  </td>
+        <td><a href=" {{route('admin.user.edit', $user->id)}} ">{{$user->name}}</a></td>
         <td> {{$user->email}} </td>
         <td> {{$user->role->name}} </td>
         <td> {{$user->is_active == 1 ? 'Online':'Offline'}} </td>

@@ -23,17 +23,17 @@
 
     <div class="form-group  row">
          {!!Form::label('password', 'Password')!!}
-         {!!Form::password('password', ['class'=>'form-control'])!!}
+         {!!Form::password('password')!!}
     </div>
 
     <div class="form-group">
         {!!Form::label('is_active', 'Status')!!}
-        {!!Form::select('is_active', [0 => 'Offline', 1 => 'Online'], 0 , ['class'=>'form-control'])!!}
+        {!!Form::select('is_active', [0 => 'Offline', 1 => 'Online'], 0)!!}
     </div>
   
     <div class="form-group">
          {!!Form::label('role_id', 'Role')!!}
-         {!!Form::select('role_id', [''=>'Choose one'] + $roles , ['class'=>'form-control'])!!}
+         {!!Form::select('role_id', [''=>'Choose one'] + $roles )!!}
     </div>
 
     <div class="form-group">
