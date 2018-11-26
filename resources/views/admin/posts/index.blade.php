@@ -33,7 +33,7 @@
         <td> {{$posts->id}} </td>
         <td> {{$posts->user->name}} </td>
         <td><img height="50" src="{{$posts->photo ? $posts->photo->file : '/images/Image-not-available_1.jpg'}}" alt="">  </td>
-        <td> {{$posts->category_id}} </td>
+        <td> {{$posts->category->name}} </td>
         <td> {{$posts->title}} </td>
         <td> {{$posts->body}} </td>
         <td> {{$posts->created_at->diffForHumans()}} </td>

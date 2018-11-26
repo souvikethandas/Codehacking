@@ -39,7 +39,7 @@ class AdminUserController extends Controller
     {
         //
 
-        $roles=Role::lists('name','id')->all();;
+        $roles=Role::lists('name','id')->all();
 
         return view('admin.users.create', compact('roles'));
     }
