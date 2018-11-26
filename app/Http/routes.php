@@ -19,5 +19,13 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::group(['middleware' => 'admin'], function () {
+    
+    Route::resource('admin/user', 'AdminUserController');
 
-Route::resource('admin/user', 'AdminUserController');
+    Route::resource('admin/posts', 'AdminPostController');
+
+
+});
+
+//Route::resource('admin/user', 'AdminUserController');

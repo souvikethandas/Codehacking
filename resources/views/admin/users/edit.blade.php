@@ -58,6 +58,13 @@
 {!!Form::submit('Create User',['class'=>'btn btn-primary'])!!}
 {!! Form::close() !!}
 
+{!! Form::model($user,['method'=>'DELETE','action' => ['AdminUserController@destroy', $user->id] , 'files'=>true]) !!}
+
+{!!Form::submit('Delete User',['class'=>'btn btn-danger'])!!}
+{!! Form::close() !!}
+
+
+
 </div>
 
 </div>

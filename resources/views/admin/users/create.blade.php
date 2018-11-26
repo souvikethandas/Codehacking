@@ -13,27 +13,27 @@
 
     <div class="form-group">
          {!!Form::label('name', 'Name')!!}
-         {!!Form::text('name')!!}
+         {!!Form::text('name',null, ['class'=>'form-control form-control-lg'])!!}
     </div>
 
-    <div class="form-group row">
+    <div class="form-group">
          {!!Form::label('email', 'Email')!!}
-         {!!Form::email('email')!!}
+         {!!Form::email('email',null, ['class'=>'form-control form-control-lg'])!!}
     </div>
 
-    <div class="form-group  row">
+    <div class="form-group">
          {!!Form::label('password', 'Password')!!}
-         {!!Form::password('password')!!}
+         {!!Form::password('password', ['class'=>'form-control form-control-lg'])!!}
     </div>
 
     <div class="form-group">
         {!!Form::label('is_active', 'Status')!!}
-        {!!Form::select('is_active', [0 => 'Offline', 1 => 'Online'], 0)!!}
+        {!!Form::select('is_active', [0 => 'Offline', 1 => 'Online'], 0, ['class'=>'form-control form-control-lg'])!!}
     </div>
   
     <div class="form-group">
          {!!Form::label('role_id', 'Role')!!}
-         {!!Form::select('role_id', [''=>'Choose one'] + $roles )!!}
+         {!!Form::select('role_id', [''=>'Choose one'] + $roles,null, ['class'=>'form-control form-control-lg'] )!!}
     </div>
 
     <div class="form-group">

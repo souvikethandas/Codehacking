@@ -4,6 +4,18 @@
 @section('content')
 
 
+
+
+<h1>Users</h1>
+
+<br>
+
+@if (Session::has('Deleted'))
+
+<p class="bg-danger">{{ session('Deleted') }} </p>
+    
+@endif
+
 <table class="table table-dark">
     <thead>
       <tr>
